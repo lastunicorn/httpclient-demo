@@ -13,4 +13,9 @@
 		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.9" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\HttpClientDemo.Infrastructure\HttpClientDemo.Infrastructure.csproj" />
+		<ProjectReference Include="..\HttpClientDemo.WebApiAccess\HttpClientDemo.WebApiAccess.csproj" />
+	</ItemGroup>
+
 </Project>

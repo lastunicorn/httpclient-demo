@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DustInTheWind.HttpClientDemo.WebApiAccess;
+using HttpClientDemo.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DustInTheWind.HttpClientDemo.Client.WithDependencyInjection;
 
@@ -15,19 +17,25 @@ internal static class Program
 
     private static ServiceProvider ConfigureServices()
     {
-        ServiceCollection services = new ServiceCollection();
+        ServiceCollection services = new();
 
-        services.AddHttpClient<MyService>(client =>
-        {
-            client.BaseAddress = new Uri("https://localhost:7033");
-        });
+        services
+            .AddHttpClient<WebApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7033");
+            })
+            .AddHttpMessageHandler<AuthenticationHandler>()
+            .AddHttpMessageHandler<DummyHandler>();
+
+        services.AddTransient<AuthenticationHandler>();
+        services.AddTransient<DummyHandler>();
 
         return services.BuildServiceProvider();
     }
 
     private static async Task Execute(ServiceProvider serviceProvider)
     {
-        MyService myService = serviceProvider.GetService<MyService>();
-        await myService.Execute(CancellationToken.None);
+        WebApiClient webApiClient = serviceProvider.GetService<WebApiClient>();
+        await webApiClient.Execute(CancellationToken.None);
     }
 }

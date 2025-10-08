@@ -1,10 +1,10 @@
-﻿namespace DustInTheWind.HttpClientDemo.Client.WithDependencyInjection;
+﻿namespace DustInTheWind.HttpClientDemo.WebApiAccess;
 
-internal sealed class MyService : IDisposable
+public sealed class WebApiClient : IDisposable
 {
     private readonly HttpClient httpClient;
 
-    public MyService(HttpClient httpClient)
+    public WebApiClient(HttpClient httpClient)
     {
         this.httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
     }
@@ -17,7 +17,7 @@ internal sealed class MyService : IDisposable
 
         if (httpResponseMessage.IsSuccessStatusCode)
         {
-            string content = await httpResponseMessage.Content.ReadAsStringAsync();
+            string content = await httpResponseMessage.Content.ReadAsStringAsync(cancellationToken);
             Console.WriteLine(content);
         }
     }
