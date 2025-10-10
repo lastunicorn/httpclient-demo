@@ -9,7 +9,7 @@ public sealed class WebApiClient : IDisposable
         this.httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
     }
 
-    public async Task Execute(CancellationToken cancellationToken)
+    public async Task GetDummy(CancellationToken cancellationToken)
     {
         HttpResponseMessage httpResponseMessage = await httpClient.GetAsync("Dummy", cancellationToken);
 

@@ -1,5 +1,5 @@
-﻿using DustInTheWind.HttpClientDemo.WebApiAccess;
-using HttpClientDemo.Infrastructure;
+﻿using DustInTheWind.HttpClientDemo.Infrastructure;
+using DustInTheWind.HttpClientDemo.WebApiAccess;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DustInTheWind.HttpClientDemo.Client.WithDependencyInjection;
@@ -25,10 +25,12 @@ internal static class Program
                 client.BaseAddress = new Uri("https://localhost:7033");
             })
             .AddHttpMessageHandler<AuthenticationHandler>()
-            .AddHttpMessageHandler<DummyHandler>();
+            .AddHttpMessageHandler<Dummy1Handler>()
+            .AddHttpMessageHandler<Dummy2Handler>();
 
         services.AddTransient<AuthenticationHandler>();
-        services.AddTransient<DummyHandler>();
+        services.AddTransient<Dummy1Handler>();
+        services.AddTransient<Dummy2Handler>();
 
         return services.BuildServiceProvider();
     }
@@ -36,6 +38,6 @@ internal static class Program
     private static async Task Execute(ServiceProvider serviceProvider)
     {
         WebApiClient webApiClient = serviceProvider.GetService<WebApiClient>();
-        await webApiClient.Execute(CancellationToken.None);
+        await webApiClient.GetDummy(CancellationToken.None);
     }
 }

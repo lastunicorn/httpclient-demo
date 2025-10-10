@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\HttpClientDemo.Infrastructure\HttpClientDemo.Infrastructure.csproj" />
+		<ProjectReference Include="..\HttpClientDemo.Infrastructure\HttpClientDemo.Handlers.csproj" />
 		<ProjectReference Include="..\HttpClientDemo.WebApiAccess\HttpClientDemo.WebApiAccess.csproj" />
 	</ItemGroup>
 

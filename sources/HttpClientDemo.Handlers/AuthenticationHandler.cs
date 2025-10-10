@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Headers;
 
-namespace HttpClientDemo.Infrastructure;
+namespace DustInTheWind.HttpClientDemo.Handlers;
 
 public class AuthenticationHandler : DelegatingHandler
 {

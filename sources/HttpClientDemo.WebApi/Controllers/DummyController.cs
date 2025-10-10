@@ -8,13 +8,13 @@ namespace DustInTheWind.HttpClientDemo.WebApi.Controllers;
 public class DummyController : ControllerBase
 {
     [HttpGet]
-    public GetDummyApiResponse Get([FromHeader] string dummy, [FromHeader] string authorization)
+    public GetDummyApiResponse Get([FromHeader] string dummy1, [FromHeader] string dummy2, [FromHeader] string authorization)
     {
         return new GetDummyApiResponse
         {
-            HasDummyHeader = dummy != null,
-            Dummy = dummy,
-            HasAuthorizationHeader = authorization != null
+            Dummy1 = dummy1,
+            Dummy2 = dummy2,
+            Authorization = authorization
         };
     }
 }
