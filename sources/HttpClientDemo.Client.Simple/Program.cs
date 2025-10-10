@@ -1,5 +1,5 @@
 ﻿using DustInTheWind.HttpClientDemo.WebApiAccess;
-using DustInTheWind.HttpClientDemo.Infrastructure;
+using DustInTheWind.HttpClientDemo.Handlers;
 
 namespace DustInTheWind.HttpClientDemo.Client.Simple;
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.0.11018.127
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo.Client.Simple", "HttpClientDemo.Client\HttpClientDemo.Client.Simple.csproj", "{A70821CA-D10E-4A03-A051-6CCBC093FE65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo.Client.Simple", "HttpClientDemo.Client.Simple\HttpClientDemo.Client.Simple.csproj", "{A70821CA-D10E-4A03-A051-6CCBC093FE65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo.WebApi", "HttpClientDemo.WebApi\HttpClientDemo.WebApi.csproj", "{7314DDE8-BE29-4599-B4C2-F692D43C434E}"
 EndProject

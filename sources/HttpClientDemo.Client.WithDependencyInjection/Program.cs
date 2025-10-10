@@ -1,4 +1,4 @@
-﻿using DustInTheWind.HttpClientDemo.Infrastructure;
+﻿using DustInTheWind.HttpClientDemo.Handlers;
 using DustInTheWind.HttpClientDemo.WebApiAccess;
 using Microsoft.Extensions.DependencyInjection;
 
