@@ -19,7 +19,7 @@ internal static class Program
 
         using WebApiClient webApiClient = new(httpClient);
 
-        await webApiClient.GetDummy(CancellationToken.None);
+        await webApiClient.GetDemo(CancellationToken.None);
 
         Console.Write("Press any key to exit...");
         Console.ReadKey(false);

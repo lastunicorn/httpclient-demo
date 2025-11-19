@@ -1,6 +1,6 @@
 namespace DustInTheWind.HttpClientDemo.WebApi.Models;
 
-public class GetDummyApiResponse
+public class GetDemoApiResponse
 {
     public string Dummy1 { get; set; }
 

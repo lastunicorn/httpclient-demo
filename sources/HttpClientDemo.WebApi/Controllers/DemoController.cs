@@ -5,12 +5,12 @@ namespace DustInTheWind.HttpClientDemo.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class DummyController : ControllerBase
+public class DemoController : ControllerBase
 {
     [HttpGet]
-    public GetDummyApiResponse Get([FromHeader] string dummy1, [FromHeader] string dummy2, [FromHeader] string authorization)
+    public GetDemoApiResponse Get([FromHeader] string dummy1, [FromHeader] string dummy2, [FromHeader] string authorization)
     {
-        return new GetDummyApiResponse
+        return new GetDemoApiResponse
         {
             Dummy1 = dummy1,
             Dummy2 = dummy2,

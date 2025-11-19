@@ -38,6 +38,6 @@ internal static class Program
     private static async Task Execute(ServiceProvider serviceProvider)
     {
         WebApiClient webApiClient = serviceProvider.GetService<WebApiClient>();
-        await webApiClient.GetDummy(CancellationToken.None);
+        await webApiClient.GetDemo(CancellationToken.None);
     }
 }

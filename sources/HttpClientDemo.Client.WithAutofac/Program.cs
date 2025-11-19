@@ -48,6 +48,6 @@ internal static class Program
     private static async Task Execute(IContainer container)
     {
         WebApiClient webApiClient = container.Resolve<WebApiClient>();
-        await webApiClient.GetDummy(CancellationToken.None);
+        await webApiClient.GetDemo(CancellationToken.None);
     }
 }

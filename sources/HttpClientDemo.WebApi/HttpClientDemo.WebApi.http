@@ -1,6 +1,0 @@
-@HttpClientDemo.WebApi_HostAddress = http://localhost:5252
-
-GET {{HttpClientDemo.WebApi_HostAddress}}/dummy/
-Accept: application/json
-
-###

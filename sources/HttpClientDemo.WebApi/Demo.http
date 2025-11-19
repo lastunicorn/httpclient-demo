@@ -1,0 +1,6 @@
+@RootPath = http://localhost:5252
+
+GET {{RootPath}}/demo
+Accept: application/json
+
+###
