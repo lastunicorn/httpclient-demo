@@ -2,5 +2,7 @@
 
 GET {{RootPath}}/demo
 Accept: application/json
+Dummy1: some text
+Dummy2: some other text
 
 ###
