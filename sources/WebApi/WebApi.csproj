@@ -3,8 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
-		<RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+		<AssemblyName>DustInTheWind.HttpClientWithMessageHandlersDemo.$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>DustInTheWind.HttpClientWithMessageHandlersDemo.$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>

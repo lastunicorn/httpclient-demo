@@ -1,4 +1,4 @@
-﻿namespace DustInTheWind.HttpClientDemo.WebApiAccess;
+﻿namespace DustInTheWind.HttpClientWithMessageHandlersDemo.Common;
 
 public sealed class WebApiClient : IDisposable
 {

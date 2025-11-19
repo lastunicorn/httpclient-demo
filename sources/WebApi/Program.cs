@@ -1,4 +1,4 @@
-namespace DustInTheWind.HttpClientDemo.WebApi;
+namespace DustInTheWind.HttpClientWithMessageHandlersDemo.WebApi;
 
 internal static class Program
 {

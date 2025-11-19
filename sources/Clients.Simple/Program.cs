@@ -1,7 +1,7 @@
-﻿using DustInTheWind.HttpClientDemo.WebApiAccess;
-using DustInTheWind.HttpClientDemo.Handlers;
+﻿using DustInTheWind.HttpClientWithMessageHandlersDemo.Common.MessageHandlers;
+using DustInTheWind.HttpClientWithMessageHandlersDemo.Common;
 
-namespace DustInTheWind.HttpClientDemo.Client.Simple;
+namespace DustInTheWind.HttpClientWithMessageHandlersDemo.Clients.Simple;
 
 internal static class Program
 {
@@ -10,9 +10,8 @@ internal static class Program
         HttpClientHandler httpMessageHandler = new();
         Dummy2Handler dummy2Handler = new(httpMessageHandler);
         Dummy1Handler dummy1Handler = new(dummy2Handler);
-        AuthenticationHandler authenticationHandler = new(dummy1Handler);
 
-        using HttpClient httpClient = new(authenticationHandler)
+        using HttpClient httpClient = new(dummy1Handler)
         {
             BaseAddress = new Uri("https://localhost:7033")
         };

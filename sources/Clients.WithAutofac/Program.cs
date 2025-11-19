@@ -1,10 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using DustInTheWind.HttpClientDemo.Handlers;
-using DustInTheWind.HttpClientDemo.WebApiAccess;
+using DustInTheWind.HttpClientWithMessageHandlersDemo.Common;
+using DustInTheWind.HttpClientWithMessageHandlersDemo.Common.MessageHandlers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DustInTheWind.HttpClientDemo.Client.WithAutofac;
+namespace DustInTheWind.HttpClientWithMessageHandlersDemo.Clients.WithAutofac;
 
 internal static class Program
 {
@@ -28,7 +28,6 @@ internal static class Program
             {
                 client.BaseAddress = new Uri("https://localhost:7033");
             })
-            .AddHttpMessageHandler<AuthenticationHandler>()
             .AddHttpMessageHandler<Dummy1Handler>()
             .AddHttpMessageHandler<Dummy2Handler>();
 
@@ -38,7 +37,6 @@ internal static class Program
 
         containerBuilder.Populate(services);
 
-        containerBuilder.RegisterType<AuthenticationHandler>().AsSelf();
         containerBuilder.RegisterType<Dummy1Handler>().AsSelf();
         containerBuilder.RegisterType<Dummy2Handler>().AsSelf();
 

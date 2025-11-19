@@ -1,8 +1,8 @@
-﻿using DustInTheWind.HttpClientDemo.Handlers;
-using DustInTheWind.HttpClientDemo.WebApiAccess;
+﻿using DustInTheWind.HttpClientWithMessageHandlersDemo.Common;
+using DustInTheWind.HttpClientWithMessageHandlersDemo.Common.MessageHandlers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DustInTheWind.HttpClientDemo.Client.WithDependencyInjection;
+namespace DustInTheWind.HttpClientWithMessageHandlersDemo.Clients.WithDependencyInjection;
 
 internal static class Program
 {
@@ -24,11 +24,9 @@ internal static class Program
             {
                 client.BaseAddress = new Uri("https://localhost:7033");
             })
-            .AddHttpMessageHandler<AuthenticationHandler>()
             .AddHttpMessageHandler<Dummy1Handler>()
             .AddHttpMessageHandler<Dummy2Handler>();
 
-        services.AddTransient<AuthenticationHandler>();
         services.AddTransient<Dummy1Handler>();
         services.AddTransient<Dummy2Handler>();
 

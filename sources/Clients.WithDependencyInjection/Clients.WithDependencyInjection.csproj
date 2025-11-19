@@ -4,8 +4,8 @@
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<AssemblyName>DustInTheWind.$(MSBuildProjectName)</AssemblyName>
-		<RootNamespace>DustInTheWind.$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+		<AssemblyName>DustInTheWind.HttpClientWithMessageHandlersDemo.$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>DustInTheWind.HttpClientWithMessageHandlersDemo.$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,8 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\HttpClientDemo.Handlers\HttpClientDemo.Handlers.csproj" />
-		<ProjectReference Include="..\HttpClientDemo.WebApiAccess\HttpClientDemo.WebApiAccess.csproj" />
+		<ProjectReference Include="..\HttpClientDemo.WebApiAccess\Common.csproj" />
 	</ItemGroup>
 
 </Project>
